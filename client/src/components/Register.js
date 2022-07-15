@@ -35,7 +35,7 @@ const Register = () => {
 
         const { name, email, work, add, mobile, desc, age } = inpval;
 
-        const res = await fetch("https://crudappreactjs.herokuapp.com/register", {
+        const res = await fetch("http://localhost:8003/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -82,7 +82,7 @@ const Register = () => {
                         <input type="number" value={inpval.mobile} onChange={setdata} name="mobile" class="form-control" id="exampleInputPassword1" />
                     </div>
                     <div class="mb-3 col-lg-6 col-md-6 col-12">
-                        <label for="exampleInputPassword1" class="form-label">Work</label>
+                        <label for="exampleInputPassword1" class="form-label">Position</label>
                         <input type="text" value={inpval.work} onChange={setdata} name="work" class="form-control" id="exampleInputPassword1" />
                     </div>
                     <div class="mb-3 col-lg-6 col-md-6 col-12">
@@ -90,7 +90,7 @@ const Register = () => {
                         <input type="text" value={inpval.add} onChange={setdata} name="add" class="form-control" id="exampleInputPassword1" />
                     </div>
                     <div class="mb-3 col-lg-12 col-md-12 col-12">
-                        <label for="exampleInputPassword1" class="form-label">Description</label>
+                        <label for="exampleInputPassword1" class="form-label">why should we hire you?</label>
                         <textarea name="desc" value={inpval.desc} onChange={setdata} className="form-control" id="" cols="30" rows="5"></textarea>
                     </div>
 

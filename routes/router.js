@@ -82,7 +82,6 @@ router.patch("/updateuser/:id",async(req,res)=>{
 
         console.log(updateduser);
         res.status(201).json(updateduser);
-
     } catch (error) {
         res.status(422).json(error);
     }
